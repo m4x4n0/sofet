@@ -1,0 +1,40 @@
+$padding: 20px
+
+=base-section
+    border: solid 1px $block-border-color
+    background: white
+    border-radius: $block-border-radius
+
+    &-head
+        padding: 15px $padding 12px
+        border-bottom: solid 4px $block-border-color
+        // margin-bottom: 30px
+
+    &-title
+        font-size: 15px
+        font-family: $font-family-extra-2
+        color: $text-color
+        vertical-align: bottom
+
+        span
+            margin-right: 7px
+            margin-top: -2px
+
+=base-small-section
+    +base-section
+    font-size: 11px
+    
+    &-head
+        padding: 8px $padding 5px
+        border-bottom: solid 4px $block-border-color
+        // margin-bottom: 30px
+
+    &-title
+        font-size: 12px
+        font-family: $font-family-extra-2
+        color: $text-color
+        vertical-align: bottom
+
+        span
+            margin-right: 7px
+            margin-top: -2px

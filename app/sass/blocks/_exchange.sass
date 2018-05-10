@@ -1,0 +1,45 @@
+.exchange
+    padding: 10px 20px
+    
+    ul
+        +unstyled-list
+        +justify
+        line-height: 1.4
+    
+    li
+        display: inline-block
+        font-family: 'Times New Roman', Times, serif
+        font-size: 11px
+    
+    &-rate
+        color: #2F72AF
+
+    &-rate-percent
+        font-size: 10px
+        margin: 0 4px
+        
+        &::after
+            content: ""
+            display: inline-block
+            border-left: solid 3px transparent
+            border-right: solid 3px transparent
+            vertical-align: middle
+            margin: -5px 0 0 5px
+
+    &-rate-grows
+        $grows-color: #09A8D6
+        color: $grows-color
+
+        &::after
+            border-bottom: solid 3px $grows-color
+
+    &-rate-falls
+        $falls-color: #C7410E
+        color: $falls-color
+
+        &::after
+            border-top: solid 3px $falls-color
+
+    &-rate-price
+        font-size: 10px
+        color: #666

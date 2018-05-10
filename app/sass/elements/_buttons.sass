@@ -1,0 +1,50 @@
+=butt
+    border-radius: $button-radius
+    display: inline-block
+    line-height: 1.2
+    padding: 5px 25px
+    border: none
+    &:hover
+        // box-shadow: 0 1px 0px lighten($primary-color, 0%)
+
+$button-background-grey: #E9EBEE
+.butt
+    +butt
+    background: $button-background-grey
+    color: $primary-color
+    &:hover
+        darken()
+
+.butt-g
+    +butt
+    background: $button-background-grey
+    color: $primary-color
+    &:hover
+        background: darken($button-background-grey, 5%)
+
+.butt-gg
+    $color: #737373
+    @extend .butt-g
+    color: $color
+    border: solid 1px #DDDFE2
+    &:hover
+        color: darken($color, 5%)
+
+.butt-wg
+    +butt
+    $color: #A4A7AF
+    $border-color: #DDDFE2
+    background: white
+    color: $color
+    border: solid 1px $border-color
+    &:hover
+        color: darken($color, 10%)
+        border-color: darken($border-color, 10%)
+
+.butt-p
+    +butt
+    background: $main-color
+    color: white
+    &:hover
+        color: white
+        background: lighten($main-color, 10%)

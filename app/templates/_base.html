@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% if title %}{{ title }}{% else %}Template{% endif %}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" media="all" href="/static/css/main.css">
+    <link rel="shortcut icon" href="/static/images/favicon.ico"/>
+  </head>
+  <body>
+    
+    <div class="container">
+        <div class="grid">
+            <div class="sm-col-24">
+              {% include "sections/head.html" %}
+            </div>
+        </div>
+    </div>    
+
+    <div class="container">
+      <div class="grid">
+        <div class="sm-col-6">
+          left side
+        </div>
+        <div class="sm-col-18">
+          {% block content %}
+            content
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+      
+    {% include "sections/footer.html" %}
+      
+  </body>
+</html>

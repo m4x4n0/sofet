@@ -1,0 +1,199 @@
+$project-content-paddings: 20px 50px
+$project-text-margin-left: 35px
+
+.project-detail
+    +base-section
+    line-height: 1.5
+
+    &-head
+        margin-left: 90px
+        padding: $padding
+        position: relative
+        margin-top: $padding
+        border-bottom: none
+
+    &-image
+        position: absolute
+        left: 0 $padding 20px
+        margin-left: -90px
+        
+        img
+            border-radius: $block-border-radius
+            width: 71px
+            height: 71px
+    
+    &-tools
+        overflow: hidden
+        margin-bottom: 10px
+        position: absolute
+        right: $padding
+        margin-top: -$padding
+
+    &-tags
+        float: left
+        a
+            color: $link-color-extra
+            font-size: 11px
+
+    &-links
+        float: right
+    
+    &-title
+        margin-bottom: 10px
+        font-size: 18px
+        font-family: $font-family-extra-3
+        color: darken($primary-color, 10%)
+
+    &-description
+        margin-bottom: 25px
+
+        a
+            font-family: $font-family-extra-3
+
+    &-props
+        // border-bottom: solid 1px $block-border-color
+        overflow: hidden
+        padding-bottom: 10px
+        float: right
+
+    &-location
+        float: left
+        width: 80%
+        a
+            color: #A4A7AF
+            font-size: 10px
+            font-family: $font-family-extra-3
+
+    &-subscribe
+        display: inline-block
+        // width: 10%
+        span
+            // margin-right: 8px
+        a
+            // color: #A4A7AF
+            padding-left: 15px
+            padding-right: 15px
+            word-spacing: 10px
+
+    &-bell
+        display: inline-block
+        width: 14px
+        text-align: right
+        margin-left: 10px
+
+    &-link
+        display: inline-block
+        width: 11px
+        text-align: right
+        margin-left: 20px
+
+    &-info
+        ul
+            +unstyled-list
+
+        li
+            margin-bottom: 10px
+
+        span
+            color: #737373
+
+    &-website
+        border: solid 1px #E7E8EA
+        border-width: 1px 0
+        padding: 5px $padding
+        text-align: center
+        margin-bottom: 20px
+
+    &-content
+        padding: $project-content-paddings
+
+        &-title
+            margin-top: 35px
+            
+            &:first-child
+                margin-top: 0
+            
+        &-text
+            margin-left: $project-text-margin-left
+
+    &-brands
+        padding: $project-content-paddings
+
+    &-additional-people
+        padding: $project-content-paddings
+
+    &-contacts
+        padding: $project-content-paddings
+
+        &-title
+            margin-bottom: 15px
+
+        &-body
+            margin-left: $project-text-margin-left
+
+
+    &-buttons
+        // word-spacing: 15px
+        ul
+            +unstyled-list
+            margin-left: -10px
+            margin-right: -10px
+        li
+            +inline-block
+            margin-left: 10px
+            margin-right: 10px
+
+    &-top-block
+        padding: 0 0 10px
+
+    &-social-links
+        +justify
+        margin-bottom: 10px
+        word-spacing: 20px
+        a
+            +inline-block
+            margin-bottom: 10px
+
+.project-timeline
+    $border-color: #BEC2C8
+    border: solid 1px $border-color
+    border-width: 0 0 1px 1px
+    margin-left: 10px
+    margin-top: -10px
+    min-height: 600px
+
+    &-head
+        padding: 15px 20px
+        border-bottom: solid 1px $border-color
+
+    &-events
+        padding: 20px
+
+    &-event
+        margin-bottom: 30px
+        color: #657786
+
+        &-date
+            margin-bottom: 15px
+            color: darken($primary-color, 10%)
+            font-size: 11px
+
+        &-description
+            margin-bottom: 15px
+            font-size: 11px
+
+        &-object
+            margin-bottom: 15px
+
+        &-image
+            float: left
+            margin-right: 10px
+            
+            img
+                border-radius: $image-border-radius
+
+        &-user
+            font-size: 11px
+            a
+                +block
+                color: darken($primary-color, 10%)

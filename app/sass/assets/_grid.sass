@@ -1,0 +1,69 @@
+=container
+  max-width: $container-width
+  padding: $container-y-padding $container-x-padding
+  margin: auto
+
+.container
+  +container
+
+.unindent
+  padding: 0
+  margin-left: -#{$container-x-padding}
+  margin-right: -#{$container-x-padding}
+
+.grid
+  +clear
+
+=base-col
+  float: left
+  min-height: 1px
+
+@for $i from 1 through $grid-cols
+  $grid-width: 100% / $grid-cols * $i
+  $col-name: col-#{$i}
+
+  .#{$col-name}
+    +base-col
+    width: $grid-width
+
+  .lg-#{$col-name}
+    +media-lg-min
+      +base-col
+      width: $grid-width
+
+  .md-#{$col-name}
+    +media-md-min
+      +base-col
+      width: $grid-width
+
+  .sm-#{$col-name}
+    +media-sm-min
+      +base-col
+      width: $grid-width
+
+.grid-gap
+  +clear
+
+  > [class^=col-], > [class*=-col-]
+    padding: $grid-row-gap $grid-column-gap
+    position: relative
+        
+  @for $i from 1 through $grid-cols
+    $grid-width: calc(#{100% / $grid-cols * $i} - #{$grid-column-gap * 2})
+    $col-name: col-#{$i}
+    .#{$col-name}
+      width: $grid-width
+
+    > .lg-#{$col-name}
+      +media-lg-min
+        width: $grid-width
+
+    > .md-#{$col-name}
+      +media-md-min
+        width: $grid-width
+
+    > .sm-#{$col-name}
+      +media-sm-min
+        +base-col
+        width: $grid-width
+

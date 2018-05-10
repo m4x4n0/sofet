@@ -1,0 +1,5 @@
+ProjectTitle: sitename
+
+PageList:
+- file: index.html
+  ready: 10

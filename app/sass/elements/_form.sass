@@ -1,0 +1,23 @@
+input
+    &[type=text], 
+    &[type=submit],
+    &[type=number],
+    &[type=email],
+    &[type=password]
+        border-radius: $input-border-radius
+        border: $input-border
+        padding: $input-paddings
+        font-size: $input-font-size
+    
+    &[type=text],
+    &[type=number],
+    &[type=email],
+    &[type=password]
+        color: $input-color
+
+        &::placeholder
+            color: $placeholder-color
+
+    &[type=submit]
+        background: $button-default-background
+        color: $button-default-color

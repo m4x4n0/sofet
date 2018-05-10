@@ -1,0 +1,78 @@
+@function em($size, $context: 16)
+  @return ($size/$context) * 1em
+
+@function image-url($image)
+  @return url('../images/#{$image}')
+
+=image($image)
+  background-image: image-url($image)
+
+=trans($what: all, $dur: 0.2s, $easing: ease)
+  transition: $what $dur $easing
+
+=smooth-scroll
+  -webkit-overflow-scrolling: touch
+
+=smooth-font
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+=gpu
+  transform: translate3d(0,0,0)
+
+// Media helpers
+
+=media-lg
+  +media-w-max($lg-width)
+    @content
+
+=media-md
+  +media-w-max($md-width)
+    @content
+
+=media-sm
+  +media-w-max($sm-width)
+    @content
+
+=media-xs
+  +media-w-max($xs-width)
+    @content
+
+=media-lg-min
+  +media-w-min($lg-width)
+    @content
+
+=media-md-min
+  +media-w-min($md-width)
+    @content
+
+=media-sm-min
+  +media-w-min($sm-width)
+    @content
+
+=media-xs-min
+  +media-w-min($xs-width)
+    @content
+
+=media-md-min-max
+  +rmaxmin($md-width, $sm-width)
+    @content
+
+=media-sm-min-max
+  +rmaxmin($sm-width, $xs-width)
+    @content
+
+=media-xs-min-max
+  +rmax($xs-width)
+    @content
+
+=not-ie
+  html:not(.ie) &
+    @content
+
+// Images
+=button-reset
+  background: none
+  color: transparent
+  border: none
+  padding: 0
